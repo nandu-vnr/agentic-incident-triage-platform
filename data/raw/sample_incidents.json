@@ -1,0 +1,452 @@
+[
+  {
+    "ticket_id": "INC-1001",
+    "title": "VPN authentication failure",
+    "description": "User cannot login to VPN after password reset. MFA push is not received.",
+    "priority": "P2",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Verified MFA sync, reset VPN profile, and confirmed AD password propagation."
+  },
+  {
+    "ticket_id": "INC-1002",
+    "title": "Airflow DAG failed after schema change",
+    "description": "Daily ETL DAG failed because the upstream source added a new nullable column.",
+    "priority": "P1",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Updated dbt model, reran Great Expectations validation, and triggered Airflow backfill."
+  },
+  {
+    "ticket_id": "INC-1003",
+    "title": "AWS Lambda timeout",
+    "description": "Lambda function times out while processing S3 event payloads.",
+    "priority": "P2",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Cloud Platform",
+    "resolution": "Increased timeout, optimized payload parsing, and added CloudWatch alerting."
+  },
+  {
+    "ticket_id": "INC-1004",
+    "title": "Database connection timeout",
+    "description": "Application logs show repeated PostgreSQL connection timeout errors.",
+    "priority": "P1",
+    "category": "Database",
+    "assigned_team": "DBA",
+    "resolution": "Checked connection pool limits, restarted service, and increased max connections."
+  },
+  {
+    "ticket_id": "INC-1005",
+    "title": "Suspicious login activity",
+    "description": "Multiple failed login attempts detected from unusual location.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Disabled account, reviewed logs, forced password reset, and created security incident."
+  },
+  {
+    "ticket_id": "INC-1006",
+    "title": "Kubernetes deployment stuck",
+    "description": "New service deployment is stuck in pending state due to image pull errors.",
+    "priority": "P2",
+    "category": "Deployment Failure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Validated image repository credentials, fixed the deployment manifest, and redeployed."
+  },
+  {
+    "ticket_id": "INC-1007",
+    "title": "User cannot access production database",
+    "description": "Service account receives permission denied while querying the analytics database.",
+    "priority": "P2",
+    "category": "Database",
+    "assigned_team": "DBA",
+    "resolution": "Reviewed IAM policy, granted required read permissions, and verified connection."
+  },
+  {
+    "ticket_id": "INC-1008",
+    "title": "Delayed dashboard refresh",
+    "description": "Business intelligence dashboards are not updating after the nightly ETL run.",
+    "priority": "P3",
+    "category": "Data Engineering",
+    "assigned_team": "Analytics Engineering",
+    "resolution": "Tracked the failed job, reran the pipeline, and fixed the stale refresh schedule."
+  },
+  {
+    "ticket_id": "INC-1009",
+    "title": "Firewall rule blocks API traffic",
+    "description": "External API calls are rejected by new firewall rules after the network change.",
+    "priority": "P2",
+    "category": "Network",
+    "assigned_team": "Network Operations",
+    "resolution": "Updated firewall filter to allow the service CIDR and tested traffic flow."
+  },
+  {
+    "ticket_id": "INC-1010",
+    "title": "Service exception after authentication change",
+    "description": "Application throws an auth token validation error after identity provider update.",
+    "priority": "P1",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Rolled back the auth integration change, audited token issuance, and patched the client library."
+  },
+  {
+    "ticket_id": "INC-1011",
+    "title": "Cloud storage bucket not accessible",
+    "description": "Automated backup job cannot write to the S3 bucket due to ACL restrictions.",
+    "priority": "P2",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Cloud Platform",
+    "resolution": "Adjusted bucket policy, validated IAM role access, and reran the backup."
+  },
+  {
+    "ticket_id": "INC-1012",
+    "title": "Identity sync failure",
+    "description": "Active Directory synchronization is failing for a batch of new users.",
+    "priority": "P2",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Examined sync logs, corrected invalid attributes, and restarted the sync pipeline."
+  },
+  {
+    "ticket_id": "INC-1013",
+    "title": "SSL certificate expired",
+    "description": "Public-facing service is returning certificate expired warnings.",
+    "priority": "P1",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Security Operations",
+    "resolution": "Rotated the certificate, updated the load balancer, and verified browser access."
+  },
+  {
+    "ticket_id": "INC-1014",
+    "title": "Disk pressure on production node",
+    "description": "A compute node is reporting high disk usage and OOM warnings.",
+    "priority": "P1",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Cleaned temporary files, resized storage, and tuned retention policies."
+  },
+  {
+    "ticket_id": "INC-1015",
+    "title": "Cluster monitor alert for CPU spike",
+    "description": "Monitoring alerts show sustained CPU spikes in the order processing cluster.",
+    "priority": "P2",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Investigated consumer load, optimized queries, and adjusted autoscaling thresholds."
+  },
+  {
+    "ticket_id": "INC-1016",
+    "title": "Failed SSO login",
+    "description": "Single sign-on logins fail for users in the EU region.",
+    "priority": "P1",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Fixed the SAML configuration, restarted the auth provider, and confirmed login flow."
+  },
+  {
+    "ticket_id": "INC-1017",
+    "title": "Suspicious API key usage",
+    "description": "High volume of requests from a service account outside normal usage patterns.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Revoked the compromised key, issued a new one, and initiated an incident response."
+  },
+  {
+    "ticket_id": "INC-1018",
+    "title": "Broken ETL job after schema migration",
+    "description": "The warehouse load job fails because the target table schema changed.",
+    "priority": "P2",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Updated the ingest transformation, reran the migration checks, and restarted the job."
+  },
+  {
+    "ticket_id": "INC-1019",
+    "title": "Unexpected 500 errors in checkout",
+    "description": "Checkout endpoint returns 500 after an application dependency upgrade.",
+    "priority": "P1",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Rolled back the dependency, captured stack traces, and applied a hotfix patch."
+  },
+  {
+    "ticket_id": "INC-1020",
+    "title": "Data retention job missed schedule",
+    "description": "Monthly cleanup did not run and old records were not purged.",
+    "priority": "P3",
+    "category": "Data Engineering",
+    "assigned_team": "Analytics Engineering",
+    "resolution": "Reset the scheduler, reran the retention job, and documented the corrective action."
+  },
+  {
+    "ticket_id": "INC-1021",
+    "title": "Airflow task hung after database migration",
+    "description": "A DAG task is waiting indefinitely on a lock held by a schema migration process.",
+    "priority": "P1",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Released the lock, updated task retry policy, and coordinated with DB migration owners."
+  },
+  {
+    "ticket_id": "INC-1022",
+    "title": "Role authorization failure",
+    "description": "Service role is denied access to the secrets manager after policy changes.",
+    "priority": "P2",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Reviewed role bindings, restored policy permissions, and verified access."
+  },
+  {
+    "ticket_id": "INC-1023",
+    "title": "DNS outage for internal API",
+    "description": "Internal service calls fail because the internal DNS resolver cannot resolve the service name.",
+    "priority": "P1",
+    "category": "Network",
+    "assigned_team": "Network Operations",
+    "resolution": "Restarted DNS caching services, corrected zone entries, and verified cluster discovery."
+  },
+  {
+    "ticket_id": "INC-1024",
+    "title": "Pipeline checkpoint mismatch",
+    "description": "Batch ingestion pipeline reports checkpoint state drift after data schema mismatch.",
+    "priority": "P2",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Validated schema contract, backfilled the missed window, and updated pipeline monitoring."
+  },
+  {
+    "ticket_id": "INC-1025",
+    "title": "Production job queue backlog",
+    "description": "Message queue backlog grows and downstream workers cannot keep up.",
+    "priority": "P2",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Scaled worker nodes, tuned queue retention, and optimized message processing."
+  },
+  {
+    "ticket_id": "INC-1026",
+    "title": "Identity provider certificate rotated",
+    "description": "New identity provider certificate caused SSO failures for the mobile app.",
+    "priority": "P1",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Updated the SSO trust bundle, validated login flows, and communicated with affected teams."
+  },
+  {
+    "ticket_id": "INC-1027",
+    "title": "Unexpected database deadlocks",
+    "description": "High concurrency job triggers repeated deadlocks in the reporting database.",
+    "priority": "P2",
+    "category": "Database",
+    "assigned_team": "DBA",
+    "resolution": "Identified conflicting transactions, rewrote queries, and adjusted isolation levels."
+  },
+  {
+    "ticket_id": "INC-1028",
+    "title": "Unauthorized port scan detected",
+    "description": "Network security logs show repeated port scans against internal services.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Blocked malicious IPs, escalated to the incident response team, and audited firewall rules."
+  },
+  {
+    "ticket_id": "INC-1029",
+    "title": "GraphQL query latency spike",
+    "description": "A high-volume GraphQL query is causing latency spikes and slow page loads.",
+    "priority": "P2",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Cached expensive fields, optimized query execution, and added rate limiting."
+  },
+  {
+    "ticket_id": "INC-1030",
+    "title": "Alert on failed container health check",
+    "description": "Container health checks are failing due to an application startup delay.",
+    "priority": "P2",
+    "category": "Deployment Failure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Increased readiness timeout, fixed startup configuration, and redeployed the service."
+  },
+  {
+    "ticket_id": "INC-1031",
+    "title": "Onboarding portal access denied",
+    "description": "New employees cannot access the onboarding portal due to a missing role assignment.",
+    "priority": "P3",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Added the missing role mapping, verified access, and updated identity provisioning rules."
+  },
+  {
+    "ticket_id": "INC-1032",
+    "title": "Backup restore failing due to checksum error",
+    "description": "A restore job for archived files fails with a checksum mismatch.",
+    "priority": "P2",
+    "category": "Cloud Infrastructure",
+    "assigned_team": "Cloud Platform",
+    "resolution": "Verified backup integrity, rehydrated from a stable snapshot, and updated the restore script."
+  },
+  {
+    "ticket_id": "INC-1033",
+    "title": "Critical security patch not applied",
+    "description": "A vulnerability scan finds one production host missing the latest patch.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Applied the patch, restarted the host, and confirmed the system is no longer vulnerable."
+  },
+  {
+    "ticket_id": "INC-1034",
+    "title": "Data warehouse query timeout",
+    "description": "Analyst queries are timing out in the warehouse during peak hours.",
+    "priority": "P2",
+    "category": "Data Engineering",
+    "assigned_team": "DBA",
+    "resolution": "Optimized the slow query, added indexes, and reviewed resource classes."
+  },
+  {
+    "ticket_id": "INC-1035",
+    "title": "Alert for failing batch checkpoint",
+    "description": "A nightly batch checkpoint fails and needs manual intervention.",
+    "priority": "P2",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Reset the checkpoint state, retried the batch, and added guardrails."
+  },
+  {
+    "ticket_id": "INC-1036",
+    "title": "PCI compliance scanning error",
+    "description": "Credentialed scan is failing on a set of application endpoints.",
+    "priority": "P3",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Whitelisted the scanner IPs, confirmed authorized test access, and reran the scan."
+  },
+  {
+    "ticket_id": "INC-1037",
+    "title": "Cache invalidation not happening",
+    "description": "Users are seeing stale content because cache invalidation is not firing after deploy.",
+    "priority": "P2",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Diagnosed the invalidation hook, fixed the webhook payload, and cleared stale entries."
+  },
+  {
+    "ticket_id": "INC-1038",
+    "title": "Failed service restart",
+    "description": "A critical service fails to start due to missing environment variables after deployment.",
+    "priority": "P2",
+    "category": "Deployment Failure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Restored the environment spec, restarted the service, and verified health checks."
+  },
+  {
+    "ticket_id": "INC-1039",
+    "title": "Suspicious privilege escalation attempt",
+    "description": "Audit logs show a user trying to access privileged resources outside approval.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Blocked the account, investigated the activity, and tightened access controls."
+  },
+  {
+    "ticket_id": "INC-1040",
+    "title": "Data ingestion pipeline lagging",
+    "description": "Streaming ingestion falls behind because the producer keyspace is hot.",
+    "priority": "P2",
+    "category": "Data Engineering",
+    "assigned_team": "Data Platform",
+    "resolution": "Scaled the ingestion cluster, partitioned the hot keyspace, and reduced lag."
+  },
+  {
+    "ticket_id": "INC-1041",
+    "title": "Service deployment rollback",
+    "description": "Deployment was automatically rolled back after repeated health check failures.",
+    "priority": "P2",
+    "category": "Deployment Failure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Analyzed the release, fixed the bad configuration, and deployed a stable version."
+  },
+  {
+    "ticket_id": "INC-1042",
+    "title": "Email alerts not sent",
+    "description": "Incident notifications are not being delivered due to SMTP service failures.",
+    "priority": "P2",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Restarted the SMTP connector, validated credentials, and tested notification delivery."
+  },
+  {
+    "ticket_id": "INC-1043",
+    "title": "Unauthorized database query pattern",
+    "description": "A data access policy violation was detected in an internal BI report.",
+    "priority": "P2",
+    "category": "Security Alert",
+    "assigned_team": "DBA",
+    "resolution": "Revoked the query permission, alerted the report owner, and logged the policy violation."
+  },
+  {
+    "ticket_id": "INC-1044",
+    "title": "Missing read access for analytics job",
+    "description": "Analytics job fails because it cannot read from the source object storage bucket.",
+    "priority": "P3",
+    "category": "Data Engineering",
+    "assigned_team": "Analytics Engineering",
+    "resolution": "Fixed bucket ACLs, reauthenticated the job role, and resumed the run."
+  },
+  {
+    "ticket_id": "INC-1045",
+    "title": "Identity provider latency alert",
+    "description": "SSO performance alerts are raised when identity provider responses exceed thresholds.",
+    "priority": "P3",
+    "category": "Access Management",
+    "assigned_team": "IAM",
+    "resolution": "Reviewed provider health, adjusted retry logic, and informed customer support."
+  },
+  {
+    "ticket_id": "INC-1046",
+    "title": "Unauthorized cloud resource creation",
+    "description": "A developer created an unauthorized VM outside approved environments.",
+    "priority": "P1",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Terminated the rogue resource, enforced policy guardrails, and reviewed approvals."
+  },
+  {
+    "ticket_id": "INC-1047",
+    "title": "Source control merge conflict breaks deploy",
+    "description": "A merge conflict caused the deployment pipeline to fail during release prep.",
+    "priority": "P3",
+    "category": "Deployment Failure",
+    "assigned_team": "Platform Engineering",
+    "resolution": "Resolved the conflict, reran the pipeline, and improved merge validation."
+  },
+  {
+    "ticket_id": "INC-1048",
+    "title": "API gateway rate limit exceeded",
+    "description": "Requests are being throttled by the gateway due to a burst of traffic.",
+    "priority": "P2",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Adjusted rate limit rules, added client retry guidance, and monitored traffic."
+  },
+  {
+    "ticket_id": "INC-1049",
+    "title": "Stale secret detected in config",
+    "description": "A secret manager audit found a stale credential still referenced in an app config.",
+    "priority": "P2",
+    "category": "Security Alert",
+    "assigned_team": "Security Operations",
+    "resolution": "Rotated the credential, removed the stale reference, and audited config scripts."
+  },
+  {
+    "ticket_id": "INC-1050",
+    "title": "Latency regression after cache eviction",
+    "description": "A production latency regression occurred after an unexpected cache eviction event.",
+    "priority": "P2",
+    "category": "Application Support",
+    "assigned_team": "App Support",
+    "resolution": "Identified cache misconfiguration, restored warm cache state, and tuned eviction policies."
+  }
+]

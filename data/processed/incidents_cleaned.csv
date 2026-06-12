@@ -1,0 +1,6 @@
+ticket_id,title,description,priority,category,assigned_team,resolution
+INC-1001,VPN authentication failure,User cannot login to VPN after password reset. MFA push is not received.,P2,Access Management,IAM,Verified MFA sync, reset VPN profile, and confirmed AD password propagation.
+INC-1002,Airflow DAG failed after schema change,Daily ETL DAG failed because the upstream source added a new nullable column.,P1,Data Engineering,Data Platform,Updated dbt model, reran Great Expectations validation, and triggered Airflow backfill.
+INC-1003,AWS Lambda timeout,Lambda function times out while processing S3 event payloads.,P2,Cloud Infrastructure,Cloud Platform,Increased timeout, optimized payload parsing, and added CloudWatch alerting.
+INC-1004,Database connection timeout,Application logs show repeated PostgreSQL connection timeout errors.,P1,Database,DBA,Checked connection pool limits, restarted service, and increased max connections.
+INC-1005,Suspicious login activity,Multiple failed login attempts detected from unusual location.,P1,Security Alert,Security Operations,Disabled account, reviewed logs, forced password reset, and created security incident.

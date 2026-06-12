@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+sentence-transformers
+scikit-learn
+xgboost
+faiss-cpu
+streamlit
+joblib
+pandas
+numpy
+openai
+pytest
+requests
